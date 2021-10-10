@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.neppplus.pizzaorderapp_20211010.R
+import com.neppplus.pizzaorderapp_20211010.ViewStoreDetailActivity
 import com.neppplus.pizzaorderapp_20211010.adapters.PizzaStoreAdapter
 import com.neppplus.pizzaorderapp_20211010.datas.StoreData
 import kotlinx.android.synthetic.main.fragment_pizza_store_list.*
@@ -40,7 +41,8 @@ class PizzaStoreListFragment : Fragment() {
 
             val clickedStore = mPizzaStoreList[position]
 
-//            val myIntent = Intent(requireContext(), )
+            val myIntent = Intent(requireContext(), ViewStoreDetailActivity::class.java )
+            myIntent.putExtra("store", clickedStore)
 
         }
 
